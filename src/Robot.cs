@@ -45,10 +45,6 @@ namespace com.lauchlin.toyrobot
             }
         }
 
-        public void SendCommand(string command) {
-            Console.WriteLine (command);
-        } 
-
         private Point LookingAt() {
             int nx = (int) Math.Round (Math.Cos (Math.PI * facing / 2.0));
             int ny = (int) Math.Round (Math.Sin (Math.PI * facing / 2.0));
