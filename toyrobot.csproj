@@ -49,7 +49,7 @@
         <Policies>
           <DotNetNamingPolicy DirectoryNamespaceAssociation="None" ResourceNamePolicy="FileFormatDefault" />
         </Policies>
-        <MonoDevelop.Autotools.MakefileInfo IntegrationEnabled="True" RelativeMakefileName="Makefile">
+        <MonoDevelop.Autotools.MakefileInfo RelativeMakefileName="Makefile">
           <BuildFilesVar />
           <DeployFilesVar />
           <ResourcesVar />
