@@ -7,7 +7,7 @@ namespace com.lauchlin.toyrobot
         private Table table;
         private Point location = new Point(0,0);
         private int facing = -1;
-        private string[] DIRECTIONS = {"EAST", "NORTH", "WEST", "SOUTH"}; 
+        private string[] DIRECTIONS = {"NORTH", "EAST", "SOUTH", "WEST"}; 
 
         public Robot (Table table)
         {
@@ -21,13 +21,13 @@ namespace com.lauchlin.toyrobot
             }
         }
 
-        public void Right()
+        public void Left()
         {
             // Floored mod
             facing = Placed() ? (((facing -1) % 4) + 4) % 4 : facing;
         }
 
-        public void Left()
+        public void Right()
         {
             facing = Placed() ? (facing + 1)%4 : facing;
         }
@@ -46,8 +46,8 @@ namespace com.lauchlin.toyrobot
         }
 
         private Point LookingAt() {
-            int nx = (int) Math.Round (Math.Cos (Math.PI * facing / 2.0));
-            int ny = (int) Math.Round (Math.Sin (Math.PI * facing / 2.0));
+            int nx = (int) Math.Round (Math.Sin (Math.PI * facing / 2.0));
+            int ny = (int) Math.Round (Math.Cos (Math.PI * facing / 2.0));
             return location.plus(new Point(nx,ny));
         }
 
